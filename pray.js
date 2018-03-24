@@ -18,36 +18,36 @@ pray.use("/api/v0/users", prayRoutes);
 
 // nodemon = [pray.js];
 
-// request('http://api.aladhan.com/v1/calendar?latitude=51.508515&longitude=-0.1254872&method=2&month=4&year=2017', (error, response, body) => {
-//   if(!error && response.statusCode == 200) {
-//       const parseIt = JSON.parse(body);
-//       console.log(parseIt["data"][0]);
-//   }
-// });
-
-// // ================================================================================
-// pray.get("/", (req, res) => {
-//     res.render("mainHTML.ejs");
-// })
-
-pray.get("/", (req, res) => {
-    res.send("HELLO FROM THE ROOT ROUTE");
+request('http://api.aladhan.com/v1/calendar?latitude=51.508515&longitude=-0.1254872&method=2&month=4&year=2017', (error, response, body) => {
+  if(!error && response.statusCode == 200) {
+      const parseIt = JSON.parse(body);
+      console.log(parseIt["data"][0]);
+  }
 });
 
+// ================================================================================
+pray.get("/", (req, res) => {
+    res.render("mainHTML.ejs");
+})
 
-// pray.post("/ptime", (req, res) => {
-//  {
-//      users = [
-//          {
-//             name: "shakur ahmed",
-//               pw: "store in db",
-//           email: "shakur@gmail.com",
-//           phone: "415-926-1183",
+// pray.get("/", (req, res) => {
+//     res.send("HELLO FROM THE ROOT ROUTE");
+// });
+
+
+pray.post("/ptime", (req, res) => {
+ {
+     users = [
+         {
+            name: "shakur ahmed",
+              pw: "store in db",
+          email: "shakur@gmail.com",
+          phone: "415-926-1183",
             
-//          }
-//          ]
-//  }  
-// })
+         }
+         ]
+ }  
+})
 
 // ================================================================================
 pray.get("*", (req, res) => {

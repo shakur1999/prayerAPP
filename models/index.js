@@ -9,6 +9,4 @@ mongoose.Promise = Promise;
 
 module.exports.PrayModel = require("./prayers");
 
-// module.exports.prayers = ????
-
 // again this file is just to connect to mongoose database features
