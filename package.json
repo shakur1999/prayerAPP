@@ -17,7 +17,7 @@
     "node-restful": "^0.2.6",
     "nodemon": "^1.17.1",
     "request": "^2.83.0",
-    "serve": "^6.5.1"
+    "serve": "^7.0.0"
   },
   "devDependencies": {},
   "description": ""
